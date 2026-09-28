@@ -1,0 +1,18 @@
+{
+  "name": "us-duelfer-report",
+  "title": "Comprehensive Report of the Special Advisor to the DCI on Iraq's WMD, Volume I",
+  "resources": [
+    {
+      "title": "Comprehensive Report of the Special Advisor to the Director of Central Intelligence on Iraq's WMD, with Addendums — Volume I of III",
+      "path": "archive/duelfer-report-vol1.pdf",
+      "format": "pdf",
+      "mediatype": "application/pdf",
+      "sources": [
+        {
+          "web": "https://www.govinfo.gov/content/pkg/GPO-DUELFERREPORT/pdf/GPO-DUELFERREPORT-1.pdf",
+          "title": "GPO-DUELFERREPORT-1 (govinfo.gov, U.S. Government Publishing Office)"
+        }
+      ]
+    }
+  ]
+}
