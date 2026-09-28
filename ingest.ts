@@ -1,4 +1,4 @@
-import { columns, pipeline, runningFurniture } from "@rtm/ingest";
+import { columns, listedHeadings, pipeline, runningFurniture } from "@rtm/ingest";
 
 /**
  * How this report is built. Owned by the report: every decision that shaped
@@ -32,5 +32,11 @@ export default pipeline({
     // ("Regime Strategic Intent" / "Regime Finance and Procurement"), which
     // repeats verbatim across the whole volume.
     runningFurniture(),
+    // Each chapter opens with a full contents list of its own subsections.
+    // Without this, names in captured-document facsimiles, table cells and
+    // people's names set on their own line (e.g. a source list "Engineer
+    // Azmy Khrisat ... Mr. Thamir Abbas Ghadban") pass for headings one by
+    // one. Only a heading the contents names is kept.
+    listedHeadings(),
   ],
 });

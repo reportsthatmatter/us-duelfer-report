@@ -1,0 +1,16 @@
+{
+  "markdownSha": "cb7450d6cb0cb2dc967b7435cc6ac9b199cb6b8ca9c64fc76b2f32b3456cfd3b",
+  "words": 167062,
+  "blocks": {
+    "heading": 1,
+    "quote": 278,
+    "list": 1395,
+    "paragraph": 2508
+  },
+  "headings": [
+    "Notes"
+  ],
+  "footnotes": 2,
+  "pageMarkers": 251,
+  "poppler": "26.08.0"
+}
