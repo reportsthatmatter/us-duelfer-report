@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "description": "Source archive and ingestion definition for: The Duelfer Report, Volume I",
+  "_pin_note": "DO-NOT-MERGE: @rtm/ingest pinned to the unmerged/untagged branch reportsthatmatter/ingest#duelfer-banner-fix (PR #22) for the side-banner crop fix, reportsthatmatter-1l4. Repin to the released tag once it ships and remove this note.",
   "dependencies": {
-    "@rtm/ingest": "github:reportsthatmatter/ingest#v0.12.21"
+    "@rtm/ingest": "github:reportsthatmatter/ingest#duelfer-banner-fix"
   }
 }

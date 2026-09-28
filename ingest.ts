@@ -21,6 +21,19 @@ export default pipeline({
     {
       path: "archive/duelfer-report-vol1.pdf",
       sha256: "a62d23e5107b94075b727fa1692c1206cfc71356fe3e813a34f151efaa1713a0",
+      // The printed chapter name ("Regime Strategic Intent" / "Regime Finance
+      // and Procurement") is set as a rotated tab in the PDF's bleed margin,
+      // outside its trimmed page: `pdfinfo -box` reports CropBox 612x792 but
+      // MediaBox 684x864, and `pdftotext -bbox` puts the tab at x 612-634 —
+      // beyond the CropBox's right edge. Read at full MediaBox width (the
+      // default), it reaches the line stream and, because it sits at a fixed
+      // x rather than a page top/bottom edge, `runningFurniture()` cannot
+      // catch it: it lands at an arbitrary point in reading order on
+      // whichever pages carry it, splicing into 142 sentences (measured
+      // without this crop). No real content extends past x=576 in a sample
+      // of 20 pages, so cropping at x<610 has ~35pt of margin on both sides.
+      // reportsthatmatter-1l4.
+      crop: { x: 0, y: 0, width: 610, height: 828 },
     },
   ],
   passes: [
@@ -28,9 +41,9 @@ export default pipeline({
     // bullet points (e.g. printed pp.64-66); left unsplit, poppler's raw
     // text order weaves the two columns' bullets together mid-sentence.
     columns(),
-    // Every page carries the chapter name as a rotated side-banner graphic
-    // ("Regime Strategic Intent" / "Regime Finance and Procurement"), which
-    // repeats verbatim across the whole volume.
+    // Belt and braces: catches any furniture that does repeat at a page
+    // edge. The chapter-tab banner itself is excluded at extraction (the
+    // volume's `crop`, above), not by this pass.
     runningFurniture(),
     // Each chapter opens with a full contents list of its own subsections.
     // Without this, names in captured-document facsimiles, table cells and

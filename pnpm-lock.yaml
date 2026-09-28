@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@rtm/ingest':
-        specifier: github:reportsthatmatter/ingest#v0.12.21
-        version: https://codeload.github.com/reportsthatmatter/ingest/tar.gz/2af707e3d7b24da621955097a197bb0dbd5e0df5
+        specifier: github:reportsthatmatter/ingest#duelfer-banner-fix
+        version: https://codeload.github.com/reportsthatmatter/ingest/tar.gz/9491de2e42e4b16d502cab7c854408380559178c
 
 packages:
 
-  '@rtm/ingest@https://codeload.github.com/reportsthatmatter/ingest/tar.gz/2af707e3d7b24da621955097a197bb0dbd5e0df5':
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/reportsthatmatter/ingest/tar.gz/2af707e3d7b24da621955097a197bb0dbd5e0df5}
-    version: 0.12.21
+  '@rtm/ingest@https://codeload.github.com/reportsthatmatter/ingest/tar.gz/9491de2e42e4b16d502cab7c854408380559178c':
+    resolution: {gitHosted: true, tarball: https://codeload.github.com/reportsthatmatter/ingest/tar.gz/9491de2e42e4b16d502cab7c854408380559178c}
+    version: 0.14.0
     hasBin: true
 
   argparse@2.0.1:
@@ -50,7 +50,7 @@ packages:
 
 snapshots:
 
-  '@rtm/ingest@https://codeload.github.com/reportsthatmatter/ingest/tar.gz/2af707e3d7b24da621955097a197bb0dbd5e0df5':
+  '@rtm/ingest@https://codeload.github.com/reportsthatmatter/ingest/tar.gz/9491de2e42e4b16d502cab7c854408380559178c':
     dependencies:
       markdown-it: 14.3.2
       yaml: 2.9.1
