@@ -1,11 +1,11 @@
 {
-  "markdownSha": "cb7450d6cb0cb2dc967b7435cc6ac9b199cb6b8ca9c64fc76b2f32b3456cfd3b",
-  "words": 167062,
+  "markdownSha": "aea08c46a4fbbaeacc20872efa099b49b70c1edea6cefc7cd69592aac4b5166a",
+  "words": 166971,
   "blocks": {
     "heading": 1,
-    "quote": 278,
-    "list": 1395,
-    "paragraph": 2508
+    "quote": 240,
+    "list": 1408,
+    "paragraph": 2404
   },
   "headings": [
     "Notes"

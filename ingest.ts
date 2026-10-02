@@ -1,4 +1,4 @@
-import { columns, listedHeadings, pipeline, runningFurniture } from "@rtm/ingest";
+import { layoutPageJoins, columns, listedHeadings, pipeline, runningFurniture } from "@rtm/ingest";
 
 /**
  * How this report is built. Owned by the report: every decision that shaped
@@ -24,6 +24,10 @@ export default pipeline({
     },
   ],
   passes: [
+    // A paragraph run over a page break that opens on a capital, a digit or a
+    // quotation mark (or follows a full stop on a justified page) joins when the
+    // layout says it runs on: no first-line indent, same face (reportsthatmatter-38s.10).
+    layoutPageJoins(),
     // Many pages set intelligence-community-style analysis as two columns of
     // bullet points (e.g. printed pp.64-66); left unsplit, poppler's raw
     // text order weaves the two columns' bullets together mid-sentence.
