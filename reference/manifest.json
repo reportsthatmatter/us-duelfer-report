@@ -1,0 +1,39 @@
+{
+  "report": "us-duelfer-report",
+  "set": "held-out",
+  "edition": "Comprehensive Report of the Special Advisor to the DCI on Iraq's WMD, CIA reading-room HTML (chapters 1-2 are volume 1), via the Wayback Machine",
+  "licence": "Public domain: a work of the United States Government (17 U.S.C. § 105).",
+  "fetched": "2026-10-02",
+  "sources": [
+    {
+      "path": "reference/raw/chap1.html",
+      "url": "https://web.archive.org/web/20110202012150id_/https://www.cia.gov/library/reports/general-reports-1/iraq_wmd_2004/chap1.html",
+      "sha256": "43ce660972b8a1d6bacb61c2f12c2c3bcccf019152c720a6a980db7a7c7cdf32",
+      "bytes": 299261
+    },
+    {
+      "path": "reference/raw/chap2.html",
+      "url": "https://web.archive.org/web/20110202012150id_/https://www.cia.gov/library/reports/general-reports-1/iraq_wmd_2004/chap2.html",
+      "sha256": "0b14cbab7f1f83e21f112076b06e348bcfcc8b875517344b5f9294488a5486b7",
+      "bytes": 465868
+    }
+  ],
+  "blocks": {
+    "path": "reference/blocks.jsonl",
+    "sha256": "fff5596637b69fc35620c4d7b90e60debf667428b8bcb9a98272321a0f1368bb",
+    "normaliser": "reportsthatmatter scripts/score/reference.py, adapter duelfer, version 1",
+    "built": "2026-10-02",
+    "counts": {
+      "heading": 135,
+      "list": 945,
+      "paragraph": 774,
+      "table": 277
+    },
+    "markers": 0,
+    "markers_linked": 0,
+    "words": 99729
+  },
+  "caveats": [
+    "The HTML omits the key findings, annexes and notes our volume 1 PDF holds."
+  ]
+}
