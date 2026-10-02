@@ -1,0 +1,198 @@
+report: us-duelfer-report
+adjudicated: 2026-10-02
+by: Claude (Sonnet 5.5), reading the PDF
+method: "20 page breaks drawn at random (seeded) from the page breaks the reference covers, plus 10 where our text and the reference disagreed. For each, pdftotext (reading order) of the two pages and, for the cases noted, the rendered page, answering: does a new block (paragraph, bullet, heading, caption) start between the last body line of the old page's last column and the first of the new page, or does the block run on. The Duelfer layout is two columns with bullets, sidebars and captions, and sets paragraphs flush with a space between, so a page that opens on a full sentence after a finished one was judged by content. prev and next are the dataset's lines."
+breaks:
+  - page: 42
+    prev: "in this case the positions of both Iran and the UN."
+    next: "•  Saddam also wrote key speeches of offi cials,"
+    verdict: split
+    stratum: random
+    image: false
+    note: "a new bullet"
+  - page: 54
+    prev: "onward, according to Tariq ‘Aziz. This favored"
+    next: "family, who was not necessarily competent, such"
+    verdict: join
+    stratum: random
+    image: false
+  - page: 55
+    prev: "defi ne and to achieve this greatness. Even what it was"
+    next: "to consist of was hazy. His drive to preserve his place"
+    verdict: join
+    stratum: disagreement
+    image: false
+  - page: 64
+    prev: "times by senior Iraqis with the message that Bagh-"
+    next: "dad wanted a dialogue with the United States, and"
+    verdict: join
+    stratum: random
+    image: false
+  - page: 74
+    prev: "an estimated 375,000 casualties and 60,000 prison-"
+    next: "ers and cost $150 billion, much of it borrowed from"
+    verdict: join
+    stratum: disagreement
+    image: false
+  - page: 79
+    prev: "and what damage they would infl ict on Iraqi"
+    next: "credibility with UNSCOM. Iraqi demands to end"
+    verdict: join
+    stratum: random
+    image: false
+  - page: 89
+    prev: "from 1999 to 2001 repeatedly—but with varying"
+    next: "success—reduced or suspended oil production in an"
+    verdict: join
+    stratum: random
+    image: false
+  - page: 94
+    prev: "May 2002 at UN Headquarters in New York among"
+    next: "Secretary-General Kofi  Annan, UNMOVIC Execu-"
+    verdict: join
+    stratum: disagreement
+    image: false
+  - page: 97
+    prev: "former senior offi cial."
+    next: "•  Iraqi military planning did not incorporate the"
+    verdict: split
+    stratum: random
+    image: false
+    note: "a new bullet"
+  - page: 99
+    prev: "inner circle, everyone else secretly believed that"
+    next: "the war would continue all the way to occupation."
+    verdict: join
+    stratum: disagreement
+    image: false
+  - page: 145
+    prev: "ng UN monitoring and importing prohibited items for Saddam."
+    next: "Chapter Summary"
+    verdict: split
+    stratum: random
+    image: false
+    note: "chapter opening"
+  - page: 148
+    prev: "the UN. With the legitimate side of the OFF program"
+    next: "providing the Iraqi population with economic relief,"
+    verdict: join
+    stratum: disagreement
+    image: false
+  - page: 163
+    prev: "and the 79,000 bbl/d fi gure announced in 1993"
+    next: "for what they imported in 1992, probably was the"
+    verdict: join
+    stratum: random
+    image: false
+  - page: 175
+    prev: "Sources and Estimation Methodology."
+    next: "According to senior MoT and offi cial sources,"
+    verdict: split
+    stratum: disagreement
+    image: true
+    note: "by content and the page image: a new paragraph; no layout cue at a page top"
+  - page: 192
+    prev: "cash from the CBI overseas accounts in Lebanon, to"
+    next: "its vault in Baghdad via diplomatic pouch and courier"
+    verdict: join
+    stratum: random
+    image: false
+  - page: 204
+    prev: "nal monitoring, legal, training and procurement, and"
+    next: "the National Monitoring Directorate. The Minister’s"
+    verdict: join
+    stratum: disagreement
+    image: false
+  - page: 208
+    prev: "him to improve Iraq’s missile capabilities."
+    next: "• Ties fl ourished after the death of IIS Director Rafi ’"
+    verdict: split
+    stratum: random
+    image: false
+    note: "a new bullet"
+  - page: 211
+    prev: "materials, foodstuffs, and power generators to cover"
+    next: "its real activity, which was coordinating with neigh-"
+    verdict: join
+    stratum: random
+    image: false
+  - page: 212
+    prev: "ing to captured SOMO documents."
+    next: "The IIS used the Al-Basha’ir front company to"
+    verdict: split
+    stratum: random
+    image: false
+    note: "a bullet ended and prose begins"
+  - page: 218
+    prev: "night-vision technology."
+    next: "•  The IIS completely controlled all procurement from"
+    verdict: split
+    stratum: random
+    image: false
+    note: "a new bullet"
+  - page: 221
+    prev: "plied to SSO’s Walid Khalid."
+    next: "Iraqi Atomic Energy Commission"
+    verdict: split
+    stratum: random
+    image: false
+    note: "heading"
+  - page: 231
+    prev: "competing with other companies for contracts."
+    next: "Supplying Iraq With Prohibited"
+    verdict: split
+    stratum: random
+    image: false
+    note: "chapter section heading"
+  - page: 242
+    prev: "SES and its subordinates."
+    next: "SES International reportedly was the primary facili-"
+    verdict: split
+    stratum: random
+    image: false
+    note: "a bullet ended and prose begins"
+  - page: 245
+    prev: "SOMO collected $538.4 million in barter goods and"
+    next: "cash through private sector trade outside the Protocol"
+    verdict: join
+    stratum: disagreement
+    image: false
+  - page: 249
+    prev: "mediary between Chinese companies and Iraq. In"
+    next: "October 2001, Syrian technicians were dispatched"
+    verdict: join
+    stratum: disagreement
+    image: false
+  - page: 252
+    prev: "UN sanctions (see fi gure 59)."
+    next: "Figure 59. JEFF Company contracts, 2002."
+    verdict: split
+    stratum: disagreement
+    image: false
+    note: "figure caption"
+  - page: 255
+    prev: "such as radar jammers, global positioning system"
+    next: "jammers, night-vision devices, and small missile"
+    verdict: join
+    stratum: random
+    image: false
+  - page: 267
+    prev: "front company. Three months before the onset of the"
+    next: "confl ict, President Lukashenko instructed the Belar-"
+    verdict: join
+    stratum: random
+    image: false
+  - page: 268
+    prev: "from unknown third parties."
+    next: "In 2001, the IAEC and MIC were working to obtain"
+    verdict: split
+    stratum: random
+    image: false
+    note: "a bullet ended and prose begins"
+  - page: 276
+    prev: "increased political scrutiny in the United States."
+    next: "Syria’s two primary transportation companies, SES"
+    verdict: split
+    stratum: random
+    image: false
+    note: "by content: the sentence before is finished and the next names a new subject"
