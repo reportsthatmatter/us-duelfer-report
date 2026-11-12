@@ -1,0 +1,122 @@
+# Golden pages: ground truth for this report, read off the PDF page image and checked by `pnpm ingest verify`.
+# Format and rules: @rtm/ingest src/golden.ts and the site's docs/quality-harness.md ("Golden pages").
+# A page marked xfail is a known pipeline defect: it stays red here, verify stays green, and the bead says why.
+# Text and structure come from the CIA's HTML edition (cleanEdition, cia-html.ts), its words from the PDF where the
+# two disagree (words: "pdf"). The report has no notes. A table is read a row at a time, each row a paragraph.
+pages:
+  # The Transmittal Message's first page: its title, the date line and seven paragraphs, two opening on a bold run-in head.
+  - pdf: 7
+    printed: 1
+    verified_by: "Claude (Opus 5.5), 2026-11-12, against the page image"
+    blocks:
+      - heading: "Transmittal Message"
+        level: 2
+      - paragraph: {start: "23 September 2004", end: "23 September 2004"}
+      - paragraph: {start: "***Introduction***. Iraq has endured decades of", end: "decisions led to total collapse."}
+      - paragraph: {start: "Weapons of Mass Destruction (WMD) were", end: "the leadership of Iraq concomitantly."}
+      - paragraph: {start: "The Iraq experience with WMD stretches", end: "feature of the intellectual elite."}
+      - paragraph: {start: "The international community has struggled with", end: "and curtailed his own leadership."}
+      - paragraph: {start: "Saddam, his family, and cronies rose,", end: "on Iraq as it decayed."}
+      - paragraph: {start: "***Dynamic Vice Static Analysis***. The goal", end: "at one point in time."}
+      - paragraph: {start: "Readers will draw their own conclusions", end: "from multiple perspectives over time."}
+    markers: []
+    footnotes: []
+  # Regime Strategic Intent's Key Findings: the heading, two bold-italic findings, each with its bulleted list.
+  - pdf: 33
+    printed: 1
+    verified_by: "Claude (Opus 5.5), 2026-11-12, against the page image"
+    blocks:
+      - heading: "Key Findings"
+        level: 3
+      - paragraph: {start: "***Saddam Husayn so dominated the Iraqi", end: "(WMD) when sanctions were lifted.***"}
+      - list: {start: "***Saddam totally dominated the Regime’s strategic", end: "by the end of 1999.", items: 4}
+      - paragraph: {start: "***Saddam wanted to recreate Iraq’s WMD", end: "tactical chemical warfare (CW) capabilities.***"}
+      - list: {start: "***Iran was the pre-eminent motivator of", end: "comments and directions to them.", items: 3}
+    markers: []
+    footnotes: []
+  # Two columns, two subheads the chapter's contents lists under "Saddam's Effect on the Workings of the Iraqi Government",
+  # each over a paragraph opening on a bold-italic sentence and a bulleted list that runs into the right-hand column.
+  - pdf: 50
+    printed: 18
+    verified_by: "Claude (Opus 5.5), 2026-11-12, against the page image"
+    blocks:
+      - heading: "Saddam Holding Court"
+        level: 4
+      - paragraph: {start: "***Saddam made shells of state institutions", end: "while institutions took the blame."}
+      - list: {start: "For example, according to Taha Yasin", end: "a particular point of time.", items: 1}
+      - heading: "Saddam and Fiscal Policy"
+        level: 4
+      - paragraph: {start: "Saddam ignored his economic advisors in", end: "their effect on fiscal management."}
+      - list: {start: "A senior Iraqi Finance Ministry official", end: "Finance (Hikmat) and finally Huwaysh.", items: 3}
+    markers: []
+    footnotes: []
+  # Regime Finance and Procurement, printed p. 16: a box at the head of the left column ("The Economic Affairs Committee
+  # (EAC)"), then the two methods of supplemental funding and a subhead set in two lines over a bold-italic paragraph.
+  # The web edition sets the box after the page's text, so the served page opens on "The first method" and the box
+  # follows: xfail until boxes are placed where the page prints them.
+  - pdf: 154
+    printed: 16
+    verified_by: "Claude (Opus 5.5), 2026-11-12, against the page image"
+    xfail: reportsthatmatter-ivg.4.1
+    blocks:
+      - paragraph: {start: "**The Economic Affairs Committee (EAC)**", end: "**The Economic Affairs Committee (EAC)**"}
+      - paragraph: {start: "*In late 1995, Saddam reestablished the", end: "handled some presumably sensitive issues.*"}
+      - paragraph: {start: "The first method, which was common", end: "additional funds (see Figure 3)."}
+      - list: {start: "These requests may have been submitted", end: "CBI to complete the transaction.", items: 3}
+      - paragraph: {start: "The second method was reserved for", end: "often contradictory (see Figure 4)."}
+      - list: {start: "According to the MoF, the Iraqi", end: "a personal appointment with Saddam.", items: 3}
+      - heading: "Approval and Authorization of Supplemental Funding"
+        level: 5
+      - paragraph: {start: "***While Saddam was the primary approval", end: "were authorized to represent Saddam).***"}
+      - paragraph: {start: "If the supplement request were made", end: "or disapprove the additional funds."}
+      - list: {start: "This verbal approval was put in", end: "the Chairman of the Diwan.", items: 2}
+      - paragraph: {start: "Approvals for all other ministries would", end: "MIC, and Iraqi security organizations)."}
+      - list: {start: "Disbursal orders sent to the MoF", end: "the request had been submitted.", items: 1}
+    markers: []
+    footnotes: []
+  # Annex K's table of front companies, printed p. 292: a table of two columns (company, location), a row each, from
+  # "Al-Husan" to "ARMOS Trading Company". The served page also takes the rows the PDF prints on the page before
+  # (from the "Company Name / Location" header to "Al-Huda"): xfail until a page that starts inside a table is
+  # marked at its row.
+  - pdf: 432
+    printed: 292
+    verified_by: "Claude (Opus 5.5), 2026-11-12, against the page image"
+    xfail: reportsthatmatter-ivg.4.2
+    blocks:
+      - paragraph: {start: "Al-Husan Baghdad, Iraq", end: "Al-Husan Baghdad, Iraq"}
+      - paragraph: {start: "Al-Hussaini Company for Trading Agency Baghdad,", end: "for Trading Agency Baghdad, Iraq"}
+      - paragraph: {start: "Al-Jawhara Al-Khaleejeya", end: "Al-Jawhara Al-Khaleejeya"}
+      - paragraph: {start: "Al-Karamah State Establishment", end: "Al-Karamah State Establishment"}
+      - paragraph: {start: "Al-Karradah", end: "Al-Karradah"}
+      - paragraph: {start: "Al-Kawther Company Baghdad, Iraq", end: "Al-Kawther Company Baghdad, Iraq"}
+      - paragraph: {start: "Al-Kibba Trading Agencies, Ltd. Baghdad, Iraq", end: "Trading Agencies, Ltd. Baghdad, Iraq"}
+      - paragraph: {start: "Al-Maymana Trade Group UAE", end: "Al-Maymana Trade Group UAE"}
+      - paragraph: {start: "Al-Maeeny Engineering Bureau Baghdad, Iraq", end: "Al-Maeeny Engineering Bureau Baghdad, Iraq"}
+      - paragraph: {start: "Al-Mersal Commercial Agencies Baghdad, Iraq", end: "Al-Mersal Commercial Agencies Baghdad, Iraq"}
+      - paragraph: {start: "Al-Mihrab Company Amman, Jordan", end: "Al-Mihrab Company Amman, Jordan"}
+      - paragraph: {start: "Al-Mufakher Baghdad, Iraq", end: "Al-Mufakher Baghdad, Iraq"}
+      - paragraph: {start: "Al-Naizak Trading Establishment UAE", end: "Al-Naizak Trading Establishment UAE"}
+      - paragraph: {start: "Al-Najah Company Baghdad, Iraq", end: "Al-Najah Company Baghdad, Iraq"}
+      - paragraph: {start: "Al-Noras Syria", end: "Al-Noras Syria"}
+      - paragraph: {start: "Al-Rafed Bureau Baghdad, Iraq", end: "Al-Rafed Bureau Baghdad, Iraq"}
+      - paragraph: {start: "Al-Rawa’a Trading Company Iraq", end: "Al-Rawa’a Trading Company Iraq"}
+      - paragraph: {start: "Al-Riat", end: "Al-Riat"}
+      - paragraph: {start: "Al-Riaya Trading Company UAE", end: "Al-Riaya Trading Company UAE"}
+      - paragraph: {start: "Al-Sabah International Bangkok, Thailand", end: "Al-Sabah International Bangkok, Thailand"}
+      - paragraph: {start: "Al-Sadera", end: "Al-Sadera"}
+      - paragraph: {start: "Al-Safoh Office General Trading Baghdad, Iraq", end: "Office General Trading Baghdad, Iraq"}
+      - paragraph: {start: "Al-Said Group for Industry and International", end: "and International Trade Baghdad, Iraq"}
+      - paragraph: {start: "Al-Saiham Company Baghdad, Iraq", end: "Al-Saiham Company Baghdad, Iraq"}
+      - paragraph: {start: "Al-Salam General Company", end: "Al-Salam General Company"}
+      - paragraph: {start: "Al-Salman Trading Company Iraq", end: "Al-Salman Trading Company Iraq"}
+      - paragraph: {start: "Al-Savivem Company Baghdad, Iraq", end: "Al-Savivem Company Baghdad, Iraq"}
+      - paragraph: {start: "Al-Sidra Trading Co. Baghdad, Iraq", end: "Al-Sidra Trading Co. Baghdad, Iraq"}
+      - paragraph: {start: "Al-Tuhfa Co. for General Trading, Ltd.", end: "General Trading, Ltd. Baghdad, Iraq"}
+      - paragraph: {start: "Al-Wadhah Co for General Trade, Ltd.", end: "Co for General Trade, Ltd."}
+      - paragraph: {start: "Al-Yisr Trading Company UAE", end: "Al-Yisr Trading Company UAE"}
+      - paragraph: {start: "Al-Zaghal Industrial Company Amman, Jordan", end: "Al-Zaghal Industrial Company Amman, Jordan"}
+      - paragraph: {start: "Arabic Computer Systems Company UAE", end: "Arabic Computer Systems Company UAE"}
+      - paragraph: {start: "Arabic Scientific Bureau Baghdad, Iraq.", end: "Arabic Scientific Bureau Baghdad, Iraq."}
+      - paragraph: {start: "ARMOS Trading Company Baghdad, Iraq", end: "ARMOS Trading Company Baghdad, Iraq"}
+    markers: []
+    footnotes: []
