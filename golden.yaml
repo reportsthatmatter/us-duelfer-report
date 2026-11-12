@@ -57,7 +57,7 @@ pages:
   - pdf: 154
     printed: 16
     verified_by: "Claude (Opus 5.5), 2026-11-12, against the page image"
-    xfail: reportsthatmatter-ivg.4.1
+    xfail: reportsthatmatter-ivg.4.3
     blocks:
       - paragraph: {start: "**The Economic Affairs Committee (EAC)**", end: "**The Economic Affairs Committee (EAC)**"}
       - paragraph: {start: "*In late 1995, Saddam reestablished the", end: "handled some presumably sensitive issues.*"}
@@ -74,49 +74,46 @@ pages:
       - list: {start: "Disbursal orders sent to the MoF", end: "the request had been submitted.", items: 1}
     markers: []
     footnotes: []
-  # Annex K's table of front companies, printed p. 292: a table of two columns (company, location), a row each, from
-  # "Al-Husan" to "ARMOS Trading Company". The served page also takes the rows the PDF prints on the page before
-  # (from the "Company Name / Location" header to "Al-Huda"): xfail until a page that starts inside a table is
-  # marked at its row.
-  - pdf: 432
-    printed: 292
+  # Annex K's table of front companies, printed p. 293: two columns (company, location), a row each, from "Atera
+  # Manufacturing" to "Nile Air Conditioning Company"; a company name over two lines ("… Agriculture General / Company
+  # (TAGCO)") is one row.
+  - pdf: 433
+    printed: 293
     verified_by: "Claude (Opus 5.5), 2026-11-12, against the page image"
-    xfail: reportsthatmatter-ivg.4.2
     blocks:
-      - paragraph: {start: "Al-Husan Baghdad, Iraq", end: "Al-Husan Baghdad, Iraq"}
-      - paragraph: {start: "Al-Hussaini Company for Trading Agency Baghdad,", end: "for Trading Agency Baghdad, Iraq"}
-      - paragraph: {start: "Al-Jawhara Al-Khaleejeya", end: "Al-Jawhara Al-Khaleejeya"}
-      - paragraph: {start: "Al-Karamah State Establishment", end: "Al-Karamah State Establishment"}
-      - paragraph: {start: "Al-Karradah", end: "Al-Karradah"}
-      - paragraph: {start: "Al-Kawther Company Baghdad, Iraq", end: "Al-Kawther Company Baghdad, Iraq"}
-      - paragraph: {start: "Al-Kibba Trading Agencies, Ltd. Baghdad, Iraq", end: "Trading Agencies, Ltd. Baghdad, Iraq"}
-      - paragraph: {start: "Al-Maymana Trade Group UAE", end: "Al-Maymana Trade Group UAE"}
-      - paragraph: {start: "Al-Maeeny Engineering Bureau Baghdad, Iraq", end: "Al-Maeeny Engineering Bureau Baghdad, Iraq"}
-      - paragraph: {start: "Al-Mersal Commercial Agencies Baghdad, Iraq", end: "Al-Mersal Commercial Agencies Baghdad, Iraq"}
-      - paragraph: {start: "Al-Mihrab Company Amman, Jordan", end: "Al-Mihrab Company Amman, Jordan"}
-      - paragraph: {start: "Al-Mufakher Baghdad, Iraq", end: "Al-Mufakher Baghdad, Iraq"}
-      - paragraph: {start: "Al-Naizak Trading Establishment UAE", end: "Al-Naizak Trading Establishment UAE"}
-      - paragraph: {start: "Al-Najah Company Baghdad, Iraq", end: "Al-Najah Company Baghdad, Iraq"}
-      - paragraph: {start: "Al-Noras Syria", end: "Al-Noras Syria"}
-      - paragraph: {start: "Al-Rafed Bureau Baghdad, Iraq", end: "Al-Rafed Bureau Baghdad, Iraq"}
-      - paragraph: {start: "Al-Rawa’a Trading Company Iraq", end: "Al-Rawa’a Trading Company Iraq"}
-      - paragraph: {start: "Al-Riat", end: "Al-Riat"}
-      - paragraph: {start: "Al-Riaya Trading Company UAE", end: "Al-Riaya Trading Company UAE"}
-      - paragraph: {start: "Al-Sabah International Bangkok, Thailand", end: "Al-Sabah International Bangkok, Thailand"}
-      - paragraph: {start: "Al-Sadera", end: "Al-Sadera"}
-      - paragraph: {start: "Al-Safoh Office General Trading Baghdad, Iraq", end: "Office General Trading Baghdad, Iraq"}
-      - paragraph: {start: "Al-Said Group for Industry and International", end: "and International Trade Baghdad, Iraq"}
-      - paragraph: {start: "Al-Saiham Company Baghdad, Iraq", end: "Al-Saiham Company Baghdad, Iraq"}
-      - paragraph: {start: "Al-Salam General Company", end: "Al-Salam General Company"}
-      - paragraph: {start: "Al-Salman Trading Company Iraq", end: "Al-Salman Trading Company Iraq"}
-      - paragraph: {start: "Al-Savivem Company Baghdad, Iraq", end: "Al-Savivem Company Baghdad, Iraq"}
-      - paragraph: {start: "Al-Sidra Trading Co. Baghdad, Iraq", end: "Al-Sidra Trading Co. Baghdad, Iraq"}
-      - paragraph: {start: "Al-Tuhfa Co. for General Trading, Ltd.", end: "General Trading, Ltd. Baghdad, Iraq"}
-      - paragraph: {start: "Al-Wadhah Co for General Trade, Ltd.", end: "Co for General Trade, Ltd."}
-      - paragraph: {start: "Al-Yisr Trading Company UAE", end: "Al-Yisr Trading Company UAE"}
-      - paragraph: {start: "Al-Zaghal Industrial Company Amman, Jordan", end: "Al-Zaghal Industrial Company Amman, Jordan"}
-      - paragraph: {start: "Arabic Computer Systems Company UAE", end: "Arabic Computer Systems Company UAE"}
-      - paragraph: {start: "Arabic Scientific Bureau Baghdad, Iraq.", end: "Arabic Scientific Bureau Baghdad, Iraq."}
-      - paragraph: {start: "ARMOS Trading Company Baghdad, Iraq", end: "ARMOS Trading Company Baghdad, Iraq"}
+      - paragraph: {start: "Atera Manufacturing Baghdad, Iraq", end: "Atera Manufacturing Baghdad, Iraq"}
+      - paragraph: {start: "Daei International Trading Co., Ltd. Baghdad,", end: "Trading Co., Ltd. Baghdad, Iraq"}
+      - paragraph: {start: "Dulaymi Company Doha, Qatar", end: "Dulaymi Company Doha, Qatar"}
+      - paragraph: {start: "Elba Jordan", end: "Elba Jordan"}
+      - paragraph: {start: "Elite Scientific Co., Ltd. Amman, Jordan", end: "Scientific Co., Ltd. Amman, Jordan"}
+      - paragraph: {start: "General Trading Baghdad, Iraq", end: "General Trading Baghdad, Iraq"}
+      - paragraph: {start: "Ghadar Engineering and Contracting Co. Amman,", end: "and Contracting Co. Amman, Jordan"}
+      - paragraph: {start: "Global Trade and Investment Lebanon", end: "Global Trade and Investment Lebanon"}
+      - paragraph: {start: "Haraq General Trading Mosul, Iraq", end: "Haraq General Trading Mosul, Iraq"}
+      - paragraph: {start: "Hayar Trading Company UAE", end: "Hayar Trading Company UAE"}
+      - paragraph: {start: "Hidhab Al-Reef Company for General Trading", end: "for General Trading Baghdad, Iraq"}
+      - paragraph: {start: "Hutten General Co. Baghdad, Iraq", end: "Hutten General Co. Baghdad, Iraq"}
+      - paragraph: {start: "IBT Trading Baghdad, Iraq", end: "IBT Trading Baghdad, Iraq"}
+      - paragraph: {start: "Inaya Company for Trade Agencies, Ltd.", end: "Trade Agencies, Ltd. Baghdad, Iraq"}
+      - paragraph: {start: "International Company for Cleaners Production Amman,", end: "for Cleaners Production Amman, Jordan"}
+      - paragraph: {start: "International Industrial Development (IID) Baghdad, Iraq", end: "Industrial Development (IID) Baghdad, Iraq"}
+      - paragraph: {start: "Irad International Trading Company UAE", end: "Irad International Trading Company UAE"}
+      - paragraph: {start: "Ishtar Trading Baghdad, Iraq", end: "Ishtar Trading Baghdad, Iraq"}
+      - paragraph: {start: "Kadhum M. Al-Wakil & Shamsh Co.,", end: "Shamsh Co., Ltd. Baghdad, Iraq"}
+      - paragraph: {start: "Khaled el-Wer of the Trading and", end: "General Company (TAGCO) Amman, Jordan"}
+      - paragraph: {start: "Khalid Al-Delaimi Co. Baghdad, Iraq", end: "Khalid Al-Delaimi Co. Baghdad, Iraq"}
+      - paragraph: {start: "Khalifa Bin Jassim Trading Co. Dubai,", end: "Jassim Trading Co. Dubai, UAE"}
+      - paragraph: {start: "LAMA Syria", end: "LAMA Syria"}
+      - paragraph: {start: "Limo Investments, Ltd Baghdad, Iraq", end: "Limo Investments, Ltd Baghdad, Iraq"}
+      - paragraph: {start: "Lootah General Trading Company", end: "Lootah General Trading Company"}
+      - paragraph: {start: "Mamad Al-Azawi Engineering Baghdad, Iraq", end: "Mamad Al-Azawi Engineering Baghdad, Iraq"}
+      - paragraph: {start: "Mayamin Trading Baghdad, Iraq", end: "Mayamin Trading Baghdad, Iraq"}
+      - paragraph: {start: "MEGA Lebanon", end: "MEGA Lebanon"}
+      - paragraph: {start: "Mesopotamia Trade Co., Ltd Baghdad", end: "Mesopotamia Trade Co., Ltd Baghdad"}
+      - paragraph: {start: "Middle East Trading Jordan", end: "Middle East Trading Jordan"}
+      - paragraph: {start: "Millennium Moscow, Russia", end: "Millennium Moscow, Russia"}
+      - paragraph: {start: "Murgam Trading Company UAE", end: "Murgam Trading Company UAE"}
+      - paragraph: {start: "Nibal Electronics", end: "Nibal Electronics"}
+      - paragraph: {start: "Nile Air Conditioning Company UAE", end: "Nile Air Conditioning Company UAE"}
     markers: []
     footnotes: []
