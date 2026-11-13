@@ -48,6 +48,14 @@ The CIA's own former hosting of this report
 is the current, stable official source, and is the born-digital original GPO
 printed from (ISBN 978-0-16-072488-6, Vol. 1).
 
+## The web edition (structure)
+
+Since 2026-11 the text is served from the CIA's own HTML edition with the PDF's page anchors and words (`cleanEdition` in `ingest.ts`, the adapter `cia-html.ts`; reportsthatmatter-ivg.4). The 23 pages of Volume I are in `reference/raw/`, each pinned by SHA-256 in `ingest.ts`: `acknowledgements`, `note`, `transmittal`, `scope`, `chap1` and `chap1_annxA`-`D`, `chap2` and `chap2_annxA`-`L`, `WMD_Timeline_Events` (`.html`). They are the Wayback Machine's raw (`id_`) captures of `https://www.cia.gov/library/reports/general-reports-1/iraq_wmd_2004/<page>.html`: `chap1` and `chap2` from 2011-02-02 (the scorer's reference copies; their text is identical to the 2007 captures), the rest from 2007-06-13. `contents.html` and `correction.html` (the April 2007 removal of the Niro Atomizer section) are kept for the record and not read.
+
+The web pages are the 30 September 2004 text; the PDF is the revised 2005 printing. Measured on the first build: 1,864 disagreement stretches (respelled names, "Security Council" to "UNSC", corrected figures, rewordings). So `words: "pdf"` serves the PDF's words wherever a disagreement is short and in place, and lists each one in `fidelity.md`; the rest stay the web edition's and are listed too. `PROCESSING.md` says what this means for a reader.
+
+`chapterTab()` in `ingest.ts` takes the bleed-margin chapter tab out of the shadow's text (reportsthatmatter-1l4); the old crop approach (ingest PR #22, branch `banner-fix`) is not needed.
+
 ## Build
 
 `ingest.ts` declares how the report is turned into Markdown. Rebuild from the
